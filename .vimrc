@@ -1,11 +1,6 @@
 " Sample .vimrc file by Martin Brochhaus
 " Presented at PyCon APAC 2012
-
-
-" ============================================
-" Note to myself:
-" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
-" ============================================
+" Extended by Dennis 'dela' Lange
 
 
 " Automatic reloading of .vimrc

@@ -29,6 +29,18 @@ syntax on
 " show line numbers
 set number
 
+" Lines of code will not wrap to the next line
+set nowrap
+
+" Make backspace behave like other editors
+set backspace=indent,eol,start
+
+" Authomatically indent on new line
+set autoindent
+
+" Highlight matching braces/tags
+set showmatch
+
 " whitespace settings
 set tabstop=4
 set softtabstop=4
@@ -60,11 +72,11 @@ Plugin 'gmarik/Vundle.vim' " Vundle
 " Plugins
 Plugin 'Lokaltog/vim-powerline' " Powerline
 Plugin 'scrooloose/nerdtree' " NERDTree
-Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
 Plugin 'SirVer/ultisnips' " Ultisnips
 Plugin 'Honza/vim-snippets' " Snippets for Ultisnips 
 Plugin 'scrooloose/syntastic' " Syntastic
-Plugin 'python-rope/ropevim' " ropevim
+Plugin 'kien/ctrlp.vim' " CtrlP for file search and open
+Plugin 'rstacruz/sparkup' " Sparkup is like zen for html
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai
@@ -76,24 +88,17 @@ filetype plugin indent on
 " Color scheme
 syntax enable
 colorscheme molokai
+set t_Co=256
 let g:rehash256 = 1
 
 
 " Plugin 'https://github.com/Lokaltog/vim-powerline.git'
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
 
 " Plugin 'https://github.com/scrooloose/nerdtree.git' " NERDTree
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
-
-" Plugin 'https://github.com/Valloric/YouCompleteMe.git' " YouCompleteMe
-let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
-let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
-let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
-let g:ycm_complete_in_comments = 1 " Completion in comments
-let g:ycm_complete_in_strings = 1 " Completion in string
 
 " Plugin 'SirVer/ultisnips' " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"

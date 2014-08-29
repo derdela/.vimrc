@@ -22,7 +22,6 @@ noremap <Leader>E :qa!<CR>	" Quit all windows
 " move code blocks
 vnoremap < <gv
 vnoremap > >gv
-
 " show syntac
 syntax on
 
@@ -77,6 +76,8 @@ Plugin 'Honza/vim-snippets' " Snippets for Ultisnips
 Plugin 'scrooloose/syntastic' " Syntastic
 Plugin 'kien/ctrlp.vim' " CtrlP for file search and open
 Plugin 'rstacruz/sparkup' " Sparkup is like zen for html
+Plugin 'klen/python-mode'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai
@@ -105,3 +106,9 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets = "<c-k>"
+
+" Plugin 'kien/rainbow_parentheses.vim
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

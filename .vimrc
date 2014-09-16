@@ -78,6 +78,8 @@ Plugin 'kien/ctrlp.vim' " CtrlP for file search and open
 Plugin 'rstacruz/sparkup' " Sparkup is like zen for html
 Plugin 'klen/python-mode'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'Raimondi/delimitMate'
+Bundle 'justinmk/vim-gtfo'
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai

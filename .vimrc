@@ -22,6 +22,7 @@ noremap <Leader>E :qa!<CR>	" Quit all windows
 " move code blocks
 vnoremap < <gv
 vnoremap > >gv
+
 " show syntac
 syntax on
 
@@ -54,7 +55,7 @@ set ignorecase
 set smartcase
 
 " disable swap files
-set nobackup
+set nobackup 
 set nowritebackup
 set noswapfile
 
@@ -76,23 +77,30 @@ Plugin 'Honza/vim-snippets' " Snippets for Ultisnips
 Plugin 'scrooloose/syntastic' " Syntastic
 Plugin 'kien/ctrlp.vim' " CtrlP for file search and open
 Plugin 'rstacruz/sparkup' " Sparkup is like zen for html
-Plugin 'klen/python-mode'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Raimondi/delimitMate'
-Bundle 'justinmk/vim-gtfo'
+Plugin 'pangloss/vim-javascript'
+Plugin 'justinmk/vim-gtfo'
+Plugin 'wookiehangover/jshint.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'burnettk/vim-angular'
+Plugin 'Chiel92/vim-autoformat'
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai
 Plugin 'tomasr/molokai' " Molokai
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'junza/Spink'
 
 call vundle#end()
 filetype plugin indent on
 
 " Color scheme
 syntax enable
-colorscheme molokai
-set t_Co=256
-let g:rehash256 = 1
+set background=dark
+colorscheme  spink
+"set t_Co=256
+"let g:rehash256 = 1
 
 
 " Plugin 'https://github.com/Lokaltog/vim-powerline.git'
@@ -114,3 +122,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Plugin 'Chiel92/vim-autoformat'
+noremap <Leader>f :Autoformat<CR>

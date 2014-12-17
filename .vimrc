@@ -65,8 +65,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
+call vundle#begin() 
 Plugin 'gmarik/Vundle.vim' " Vundle
 
 " Plugins
@@ -85,6 +84,7 @@ Plugin 'wookiehangover/jshint.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'burnettk/vim-angular'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'othree/html5.vim'
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai

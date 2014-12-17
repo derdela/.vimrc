@@ -98,7 +98,7 @@ filetype plugin indent on
 " Color scheme
 syntax enable
 set background=dark
-colorscheme  spink
+colorscheme Spink
 "set t_Co=256
 "let g:rehash256 = 1
 

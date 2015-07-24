@@ -1,13 +1,14 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
+set shell=bash
 
 " set <Leader> key
 let mapleader = ","
 
 " Quicksave command
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Navigate beetwen windows
 map <c-j> <c-w>j
@@ -42,9 +43,9 @@ set autoindent
 set showmatch
 
 " whitespace settings
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set expandtab
 
@@ -58,6 +59,11 @@ set smartcase
 set nobackup 
 set nowritebackup
 set noswapfile
+
+set relativenumber
+
+set lines=64
+set columns=128
 
 
 " ======================= Plugins ==================== "
@@ -85,6 +91,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'burnettk/vim-angular'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'othree/html5.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Color schemes
 Plugin 'sickill/vim-monokai' " Monokai
@@ -107,7 +115,6 @@ colorscheme Spink
 set laststatus=2
 
 " Plugin 'https://github.com/scrooloose/nerdtree.git' " NERDTree
-autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
